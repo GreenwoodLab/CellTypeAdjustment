@@ -87,7 +87,7 @@ library(deconf)
 
 #Running deconfounding on subset to speed up demonstration
 sampdec = sample(length(sim_beta[,1]), 1000)
-tmpdec = deconfounding(sim_beta[sampdec,],2)
+tmpdec = deconfounding(sim_beta[sampdec,],3)
 
 X.tmpdec = model.matrix(~disease_status+t(tmpdec$C$Matrix))
 lm.tmpdec = eBayes(lmFit(sim_beta, X.tmpdec))
