@@ -2,12 +2,13 @@
 
 #Loading the simulated data from the main simulation scenario.  One could also load one of the other .RData files corresponding to other
 #simulation scenarios.
+# Data for simulation scenarios can be found at https://zenodo.org/record/34128#.VlMy8WSrSRs
 # sim_beta is the matrix of simulated beta values (probes x samples).
 # disease_status is a vector with the phenotype (0=control, 1=case, except in the continuous scenario dataset)
 # true_disease is a character vector with the original patient disease status (data from before simulation).  This is coded to levels D1 through D5.
 # dmr contains the indices of CpGs that were simulated to be differentially methylated with the phenotype
 
-load("sim_scenario_data/simulated_data.RData")
+load("simulated_data.RData")
 
 #Random sample of data to speed up demonstration, if desired
 set.seed(24601)
